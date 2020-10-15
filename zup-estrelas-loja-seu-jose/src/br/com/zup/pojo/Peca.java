@@ -1,7 +1,5 @@
 package br.com.zup.pojo;
 
-import br.com.zup.principal.Categoria;
-
 public class Peca {
 
 	String codigoDeBarras;
@@ -28,7 +26,6 @@ public class Peca {
 		this.categoria = categoria;
 		this.qtdEmEstoque = qtdEmEstoque;
 	}
-	
 
 	public Peca(String codigoDeBarras, String nome, String modeloDoCarro, String fabricante, float precoDeCusto,
 			float precoDeVenda, int qtdEmEstoque) {
@@ -104,14 +101,12 @@ public class Peca {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Pecas [codigoDeBarras=" + codigoDeBarras + ", nome=" + nome + ", modeloDoCarro=" + modeloDoCarro
-				+ ", fabricante=" + fabricante + ", precoDeCusto=" + precoDeCusto + ", precoDeVenda=" + precoDeVenda
-				+ ", qtdEmEstoque=" + qtdEmEstoque + "]";
+		return "Pecas - [codigoDeBarras = " + codigoDeBarras + ", nome = " + nome + ", modeloDoCarro = " + modeloDoCarro
+				+ ", fabricante = " + fabricante + ", precoDeCusto = " + precoDeCusto + ", precoDeVenda = " + precoDeVenda
+				+ ", qtdEmEstoque = " + qtdEmEstoque + "]";
 	}
-
-	
 
 }
