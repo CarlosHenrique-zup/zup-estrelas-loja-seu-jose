@@ -11,6 +11,13 @@
 #### Enum;
 #### Peca;
 
+## ORM (Object Relational Mapping):
+- Projeto Convertido para Maven;
+
+## Diferenças:
+#### Versão - 1 : Sem ORM;
+#### Versão - 2 : Com ORM;
+
 ## Interagindo com o BD:
 #### POJO;
 #### DAO;
