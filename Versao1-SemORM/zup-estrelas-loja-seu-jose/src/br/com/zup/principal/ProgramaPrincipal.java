@@ -74,12 +74,16 @@ public class ProgramaPrincipal {
 			System.out.println("============================================");
 			System.out.println("|              [CATEGORIAS]                |");
 			System.out.println("============================================");
+			System.out.println("|                                          |");
 			System.out.println("|           [1] - FUNILARIA                |");
 			System.out.println("|           [2] - MOTOR                    |");
 			System.out.println("|           [3] - PERFORMANCE              |");
 			System.out.println("|           [4] - SOM                      |");
+			System.out.println("|           [5] - ACESSORIOS               |");
+			System.out.println("|           [6] - OUTROS                   |");
+			System.out.println("|                                          |");
 			System.out.println("============================================");
-			System.out.print("ENTRE COM O NÚMERO DA CATEGÓRIA:");
+			System.out.print("ENTRE COM O NÚMERO DA CATEGÓRIA: ");
 			categoriaLida = sc.nextInt();
 			switch (categoriaLida) {
 			case 1:
@@ -94,13 +98,19 @@ public class ProgramaPrincipal {
 			case 4:
 				categoria = Categoria.SOM.toString();
 				break;
-
+			case 5:
+				categoria = Categoria.ACESSORIOS.toString();
+				break;
+			case 6:
+				categoria = Categoria.OUTROS.toString();
+				break;
 			default:
 				System.out.println(OPCAOINVALIDA);
 				break;
 			}
 
-		} while (categoriaLida != 1 && categoriaLida != 2 && categoriaLida != 3 && categoriaLida != 4);
+		} while (categoriaLida != 1 && categoriaLida != 2 && categoriaLida != 3 && categoriaLida != 4
+				&& categoriaLida != 5);
 
 		return categoria;
 	}
@@ -118,9 +128,9 @@ public class ProgramaPrincipal {
 		String modeloDoCarro = sc.next();
 		System.out.print("INSIRA O FABRICANTE: ");
 		String fabricante = sc.next();
-		System.out.print("INSIRA O PRECO DE CUSTO: ");
+		System.out.print("INSIRA O PRECO DE CUSTO: R$ ");
 		float precoDeCusto = sc.nextFloat();
-		System.out.print("INSIRA O PRECO DE VENDA: ");
+		System.out.print("INSIRA O PRECO DE VENDA: R$ ");
 		float precoDeVenda = sc.nextFloat();
 		System.out.print("INSIRA A QUANTIDADE EM ESTOQUE: ");
 		int qtdEmEstoque = sc.nextInt();
@@ -163,7 +173,7 @@ public class ProgramaPrincipal {
 		String nomePeca = sc.next();
 
 		List<Peca> pecas = peca.consultaPecasComencandoPor(nomePeca);
-		
+
 		for (Peca peca : pecas) {
 			System.out.println(peca);
 		}
@@ -237,7 +247,7 @@ public class ProgramaPrincipal {
 		String nomePeca = sc.next();
 		System.out.print("INSIRA A QUANTIDADE DE PEÇAS: ");
 		int qtdPecas = sc.nextInt();
-		System.out.print("INSIRA O VALOR DA PEÇA: ");
+		System.out.print("INSIRA O VALOR DA PEÇA: R$ ");
 		float valorPeca = sc.nextFloat();
 
 		venda.conteudoArquivo(nomeDoArquivo, codigoDeBarras, nomePeca, qtdPecas, valorPeca);

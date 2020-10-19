@@ -2,14 +2,14 @@ package br.com.zup.pojo;
 
 public class Peca {
 
-	String codigoDeBarras;
-	String nome;
-	String modeloDoCarro;
-	String fabricante;
-	float precoDeCusto;
-	float precoDeVenda;
-	int qtdEmEstoque;
-	String categoria;
+	private String codigoDeBarras;
+	private String nome;
+	private String modeloDoCarro;
+	private String fabricante;
+	private float precoDeCusto;
+	private float precoDeVenda;
+	private int qtdEmEstoque;
+	private String categoria;
 
 	public Peca() {
 
@@ -105,8 +105,8 @@ public class Peca {
 	@Override
 	public String toString() {
 		return "Pecas - [codigoDeBarras = " + codigoDeBarras + ", nome = " + nome + ", modeloDoCarro = " + modeloDoCarro
-				+ ", fabricante = " + fabricante + ", precoDeCusto = " + precoDeCusto + ", precoDeVenda = " + precoDeVenda
-				+ ", qtdEmEstoque = " + qtdEmEstoque + "]";
+				+ ", fabricante = " + fabricante + ", precoDeCusto = " + precoDeCusto + ", precoDeVenda = "
+				+ precoDeVenda + ", qtdEmEstoque = " + qtdEmEstoque + " categoria" + categoria + "]";
 	}
 
 }

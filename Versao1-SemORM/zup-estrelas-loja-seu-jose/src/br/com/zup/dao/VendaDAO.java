@@ -29,10 +29,10 @@ public class VendaDAO {
 		} else if (pecaVendida.getQtdEmEstoque() >= qtdPecas) {
 			System.out.println("VENDA REALIZADA COM SUCESSO!");
 
-			valorDaVenda += qtdPecas * pecaVendida.getPrecoDeCusto();
+			valorDaVenda += qtdPecas * pecaVendida.getPrecoDeVenda();
 
 			vendas.add(pecaVendida.getCodigoDeBarras() + "\t" + pecaVendida.getNome() + "\t\t" + qtdPecas + "\t"
-					+ pecaVendida.getPrecoDeCusto());
+					+ pecaVendida.getPrecoDeVenda());
 
 			int novaQuantidade = pecaVendida.getQtdEmEstoque() - qtdPecas;
 			peca.diminuiQtdDePecaVendida(codigoDeBarra,novaQuantidade);
